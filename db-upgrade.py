@@ -11,14 +11,14 @@ DIRECTORY = str(sys.argv[1])
 USER= str(sys.argv[2]) 
 HOST= str(sys.argv[3])
 DB = str(sys.argv[4])
-PASSWORT= str(sys.argv[5]) 
+PASSWORD= str(sys.argv[5]) 
     
 # Connection to the database and returns the current DB Version.
 def get_db_version():
     DATA_BASE_VERSION =-1
     db = MySQLdb.connect(host=HOST,    
                          user=USER,         
-                         passwd=PASSWORT,  
+                         passwd=PASSWORD,  
                          db=DB)
 
     cur = db.cursor()
@@ -64,7 +64,7 @@ def update_db_version(OUSTANDING_FILTERED_SQL_FILES):
             #print "OK"
             db = MySQLdb.connect(host=HOST,    
                                  user=USER,         
-                                 passwd=PASSWORT,  
+                                 passwd=PASSWORD,  
                                  db=DB)
             cur = db.cursor()
             fd = open(item , 'r')
@@ -82,7 +82,7 @@ def update_db_version(OUSTANDING_FILTERED_SQL_FILES):
 def set_db_version(OUSTANDING_FILTERED_SQL_FILES):
     db = MySQLdb.connect(host=HOST,    
                          user=USER,         
-                         passwd=PASSWORT,  
+                         passwd=PASSWORD,  
                          db=DB)
 
     cur = db.cursor()
