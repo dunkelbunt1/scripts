@@ -1,0 +1,6 @@
+
+git clone --bare git@your-gitlab-site.com:mario/my-repo.git`
+cd my-repo.git
+git push --mirror git@acid-github.xx:btv/neues-repo.git
+
+git remote set-url origin git@acid-github.xx:ORga/xxx.git` 
